@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Pegajoso</title>
+    <!-- Link para o Font Awesome (para utilizar ícones) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+
+        .imagem-container {
+            width: 100%;
+            background-color: #f4f4f4;
+            display: block;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sticky-button {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: none;
+            padding: 20px 0;
+            background-color: #09b14a;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            margin: 0;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+            display: flex; /* Alinha o ícone e o texto */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sticky-button i {
+            margin-right: 10px; /* Espaço entre o ícone e o texto */
+        }
+
+        .sticky-button:hover {
+            background-color: #09b14a;
+        }
+    </style>
+</head>
+<body>
+    <div class="imagem-container">
+        <img src="1.jpg" alt="Imagem de exemplo" loading="lazy">
+        <img src="2.jpg" alt="Imagem de exemplo" loading="lazy">
+    </div>
+
+    <!-- Botão Pegajoso -->
+    <button class="sticky-button" id="sticky-button" onclick="alert('Botão clicado!')">
+        <i class="fas fa-shopping-cart"></i> <!-- Ícone de carrinho de compras -->
+        EU QUERO TER ACESSO
+    </button>
+
+    <script>
+        window.onscroll = function() {
+            var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            var pageHeight = document.documentElement.scrollHeight - window.innerHeight;
+            var scrollPercentage = (scrollPosition / pageHeight) * 100;
+
+            if (scrollPercentage >= 80) {
+                document.getElementById('sticky-button').style.display = 'inline-flex'; // Mudar para 'inline-flex' para manter o layout flexível
+            } else {
+                document.getElementById('sticky-button').style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
