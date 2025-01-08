@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acesse mais de 2000 receitas exclusivas de crochê para explorar sua criatividade e aperfeiçoar suas habilidades.">
+    <title>Download de Receitas de Crochê</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sora', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn-download {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 20px;
+        }
+
+        .btn-download:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .warning {
+            font-size: 14px;
+            color: #d9534f;
+            margin-bottom: 20px;
+        }
+
+        .email-container {
+            font-size: 14px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .email {
+            font-weight: 600;
+            color: #007BFF;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Acesse Mais de 2000 Receitas de Crochê</h1>
+        <p>Receitas exclusivas para você explorar sua criatividade e criar peças incríveis de crochê.  
+        O acesso é feito diretamente pelo Google Drive.</p>
+        <a href="https://drive.google.com" target="_blank" class="btn-download">ACESSE AQUI SUAS RECEITAS</a>
+        <p class="warning">⚠️ O compartilhamento deste material é proibido e configura crime de pirataria, conforme a legislação vigente.</p>
+        <div class="email-container">
+            <p>Em caso de dificuldades para acessar as receitas, envie um e-mail para:</p>
+            <span class="email" onclick="copyEmail()">nicolasmorais154@gmail.com</span>
+        </div>
+    </div>
+
+    <script>
+        function copyEmail() {
+            const email = "nicolasmorais154@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                alert("E-mail copiado: " + email);
+            }).catch(err => {
+                console.error("Erro ao copiar o e-mail: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
