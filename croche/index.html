@@ -5,8 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Página de exemplo com botão pegajoso e imagens otimizadas para performance e acessibilidade.">
     <title>Botão Pegajoso</title>
-    <!-- Link para o Font Awesome com carregamento assíncrono -->
+    <!-- Fonte Sora -->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" media="all">
+    <!-- TikTok Pixel Code Start -->
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject = t;
+            var ttq = w[t] = w[t] || [];
+            ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie", "holdConsent", "revokeConsent", "grantConsent"];
+            ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } };
+            for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
+            ttq.instance = function (t) {
+                for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++) ttq.setAndDefer(e, ttq.methods[n]);
+                return e;
+            };
+            ttq.load = function (e, n) {
+                var r = "https://analytics.tiktok.com/i18n/pixel/events.js", o = n && n.partner;
+                ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = r, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
+                n = document.createElement("script");
+                n.type = "text/javascript", n.async = !0, n.src = r + "?sdkid=" + e + "&lib=" + t;
+                e = document.getElementsByTagName("script")[0];
+                e.parentNode.insertBefore(n, e);
+            };
+            ttq.load('CTUSQK3C77U8ITIDTL90');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,7 +60,7 @@
             left: 0;
             width: 100%;
             padding: 15px;
-            background-color: #09b14a;
+            background: linear-gradient(90deg, #25D366, #128C7E);
             color: #ffffff;
             font-size: 20px;
             text-align: center;
@@ -45,6 +72,9 @@
             justify-content: center;
             align-items: center;
             box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.2);
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            border-radius: 4px;
         }
 
         .sticky-button i {
@@ -57,13 +87,12 @@
         }
 
         .sticky-button:hover {
-            background-color: #07a043;
+            background: linear-gradient(90deg, #20B854, #0D6F54);
         }
     </style>
 </head>
 <body>
     <div class="imagem-container">
-        <!-- Definindo width e height para evitar mudanças de layout -->
         <img src="croche/1.jpg" alt="Imagem de exemplo 1" width="1200" height="800" loading="lazy">
         <img src="croche/2.jpg" alt="Imagem de exemplo 2" width="1200" height="800" loading="lazy">
     </div>
@@ -72,10 +101,9 @@
     <button 
         class="sticky-button" 
         id="sticky-button" 
-        onclick="alert('Botão clicado!')" 
+        onclick="window.location.href='https://seguro.aprendacomigo.shop/r/AL5WDGJCM0'" 
         aria-label="Clique para ter acesso ao conteúdo">
-        <i class="fas fa-shopping-cart" aria-hidden="true"></i> <!-- Ícone acessível -->
-        EU QUERO TER ACESSO
+        <i class="fas fa-shopping-cart" aria-hidden="true"></i> EU QUERO TER ACESSO
     </button>
 
     <script>
