@@ -1,5 +1,0 @@
-{
-  "rewrites": [
-    { "source": "/croche/acesso", "destination": "/croche/acesso.html" }
-  ]
-}
